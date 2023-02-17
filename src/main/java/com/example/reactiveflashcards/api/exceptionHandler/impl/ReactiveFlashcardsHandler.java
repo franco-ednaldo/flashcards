@@ -23,7 +23,7 @@ public class ReactiveFlashcardsHandler extends AbstractHandleException<ReactiveF
     public Mono<Void> handle(ServerWebExchange exchange, ReactiveFlashcardsException ex) {
         return Mono.fromCallable(() -> {
                     prepareExchange(exchange, ex.getHttpStatus());
-                    return GENERIC_EXCEPTION.getMessage();
+                    return ex.getMessage();
                 }).map(message -> builderError(ex.getHttpStatus(), message))
                 .doFirst(() -> log.warn("=== ReactiveFlashcardsException: Method [{}] [{}] ===",
                         exchange.getRequest().getMethod(), exchange.getRequest().getPath().value(), ex))

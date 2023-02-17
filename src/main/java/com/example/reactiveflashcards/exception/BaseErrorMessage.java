@@ -13,7 +13,7 @@ public class BaseErrorMessage {
     private String[] params;
 
     public static final BaseErrorMessage GENERIC_EXCEPTION = new BaseErrorMessage("generic");
-    public static final BaseErrorMessage GENERIC_NOT_FOUND = new BaseErrorMessage("generic.notfound");
+    public static final BaseErrorMessage GENERIC_NOT_FOUND = new BaseErrorMessage("generic.notFound");
     public static final BaseErrorMessage GENERIC_METHOD_NOT_ALLOW = new BaseErrorMessage("generic.methodNotAllow");
     public static final BaseErrorMessage GENERIC_BAD_REQUEST = new BaseErrorMessage("generic.badRequest");
 
